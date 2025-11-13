@@ -1,29 +1,28 @@
 public class Collatz {
     
-    public static String getCollatzSequence(long n) {
-        StringBuilder sequence = new StringBuilder();
-        long current = n;
-        int steps = 0;
-        
-        if (n == 1) {
-            return "1 4 2 1 (4)";
-        }
-        
-        sequence.append(current);
-
-        while (current != 1) {
-            if (current % 2 == 0) {
-                current /= 2;
-            } else {
-                current = 3 * current + 1;
-            }
-            steps++;
-            sequence.append(" ").append(current);
-        }
-
-        return sequence.toString() + " (" + steps + ")";
+public static String getCollatzSequence(long n) {
+    long current = n;
+    int steps = 0;
+    
+    if (n == 1) {
+        return "1 4 2 1 (4)";
     }
+    
+    StringBuilder sequence = new StringBuilder();
+    sequence.append(current);
 
+    while (current != 1) {
+        if (current % 2 == 0) {
+            current /= 2;
+        } else {
+            current = 3 * current + 1;
+        }
+        steps++; 
+        sequence.append(" ").append(current);
+    }
+    
+    return sequence.toString() + " (" + (steps + 1) + ")"; 
+}
     public static void main(String[] args) {
         if (args.length != 2) {
             return;
