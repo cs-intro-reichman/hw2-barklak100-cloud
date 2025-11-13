@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 public class CalcPi { 
 
     public static void main(String [] args) { 
@@ -45,11 +45,4 @@ public class CalcPi {
     } 
 
 }
-=======
-// Computes an approximation of PI.
-public class CalcPi {
-	public static void main(String [] args) { 
-	    // Replace this comment with your code
-	}
-}
->>>>>>> f5de349671672dfb71c17b605b2edaaaaacd06a6
+
