@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class TimeCalc {
     public static void main(String[] args) {
         // Replace this comment with your code
@@ -21,3 +22,10 @@ public class TimeCalc {
         System.out.println(result);
 	}
 }
+=======
+public class TimeCalc {
+    public static void main(String[] args) {
+        // Replace this comment with your code
+    }
+}
+>>>>>>> f5de349671672dfb71c17b605b2edaaaaacd06a6

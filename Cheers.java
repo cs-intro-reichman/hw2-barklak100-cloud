@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class Cheers {
     public static void main(String[] args) {
 
@@ -32,3 +33,18 @@ public class Cheers {
     }
 }
 
+=======
+//feedback
+
+/*
+Great work boaz!
+*/
+
+
+// Prints a crowd cheering output.
+public class Cheers {
+        public static void main(String[] args) {
+	    // Replace this comment with your code
+        }
+}
+>>>>>>> f5de349671672dfb71c17b605b2edaaaaacd06a6
