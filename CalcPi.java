@@ -25,7 +25,6 @@ public class CalcPi {
             String piString = String.valueOf(approximatedPi);
             
             System.out.printf("pi, approximated: %18s%n", piString);
-
         } catch (NumberFormatException e) {
         }
     }
