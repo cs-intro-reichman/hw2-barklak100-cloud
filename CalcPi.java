@@ -19,8 +19,7 @@ public class CalcPi {
         double piApproximation = calculatePi(numTerms);
 
         System.out.println("pi according to Java: " + Math.PI);
-        System.out.println("pi, approximated: " + piApproximation);
-
+        System.out.printf("pi, approximated: %18s%n", piApproximation);
     } 
 
 

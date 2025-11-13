@@ -1,58 +1,50 @@
 public class Collatz {
-    public static void main(String args[]) {
+    
+    public static String getCollatzSequence(long n) {
+        StringBuilder sequence = new StringBuilder();
+        long current = n;
+        int steps = 0;
+        
+        if (n == 1) {
+            return "1 4 2 1 (4)";
+        }
+        
+        sequence.append(current);
 
-        if (args.length != 2) {
-            System.out.println("שימוש: java Collatz <N> <mode>");
-            System.out.println("יש לספק את N (מספר שלם) ואת mode ('v' או 'c').");
-            return; 
+        while (current != 1) {
+            if (current % 2 == 0) {
+                current /= 2;
+            } else {
+                current = 3 * current + 1;
+            }
+            steps++;
+            sequence.append(" ").append(current);
         }
 
-        int N;
-        try {
-            N = Integer.parseInt(args[0]);
-        } catch (NumberFormatException e) {
-            System.out.println("שגיאה: הארגומנט הראשון (N) חייב להיות מספר שלם תקין.");
-            return;
-        }
-
-        String mode = args[1];
-        boolean isVerbose = mode.equals("v");
-        boolean isConcise = mode.equals("c");
-
-        if (!isVerbose && !isConcise) {
-            System.out.println("שגיאה: mode חייב להיות 'v' (מפורט) או 'c' (תמציתי).");
-            return;
-        }
-
-        for (int seed = 1; seed <= N; seed++) {
-            long currentNumber = seed; 
-            int steps = 0;
-
-            if (isVerbose) {
-                System.out.print(seed);
-            }
-            
-            while (currentNumber != 1) {
-                
-                if (currentNumber % 2 == 0) {
-                    currentNumber = currentNumber / 2;
-                } else {
-                    currentNumber = 3 * currentNumber + 1;
-                }
-                
-                steps++; 
-                
-                if (isVerbose) {
-                    System.out.print(" " + currentNumber);
-                }
-            }
-
-            if (isVerbose) {
-                System.out.println(" (" + steps + ")");
-            }
-        } 
-
-        System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
+        return sequence.toString() + " (" + steps + ")";
     }
 
+    public static void main(String[] args) {
+        if (args.length != 2) {
+            return;
+        }
+
+        try {
+            int n = Integer.parseInt(args[0]);
+            String mode = args[1];
+
+            for (int i = 1; i <= n; i++) {
+                String sequenceOutput = getCollatzSequence(i);
+
+                if (mode.equals("v")) {
+                    System.out.println(sequenceOutput);
+                } else if (mode.equals("c")) {
+                }
+            }
+
+            System.out.println("Every one of the first " + n + " hailstone sequences reached 1.");
+
+        } catch (NumberFormatException e) {
+        }
+    }
 }

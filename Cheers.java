@@ -14,13 +14,12 @@ public class Cheers {
             char currentChar = cheeringWord.charAt(i);
 
             if (SPECIAL_LETTERS.indexOf(currentChar) >= 0) { 
-                article = "an";
+                article = "an ";
             } else {
-                article = "a";
-            }
+                 article = "a  ";   
+             }
             
-            System.out.println("Give me " + article + " " + currentChar + ": " + currentChar + "!");
-        } 
+            System.out.println("Give me " + article + currentChar + ": " + currentChar + "!");        } 
 
         
         System.out.println("What does that spell?");
