@@ -23,7 +23,7 @@ public class CalcPi {
             System.out.println("pi according to Java: " + javaPi);
             String piString = String.valueOf(approximatedPi);
             
-          System.out.printf("pi, approximated: %23.15f%n", approximatedPi);
+        System.out.printf("pi, approximated: %23s%n", piString);
         } catch (NumberFormatException e) {
         }
     }
