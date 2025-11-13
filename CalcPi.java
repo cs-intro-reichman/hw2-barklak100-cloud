@@ -20,8 +20,10 @@ public class CalcPi {
             double javaPi = Math.PI;
             double approximatedPi = calculatePi(iterations);
 
-            System.out.println("pi according to Java: " + javaPi);
+            System.out.printf("pi according to Java: %.15f%n", Math.PI);
             String piString = String.valueOf(approximatedPi);
             
-System.out.printf("pi, approximated: %24s%n", piString);    }
-}
+            System.out.printf("pi, approximated:     %.14f%n", approximatedPi);
+        
+        }
+    }
