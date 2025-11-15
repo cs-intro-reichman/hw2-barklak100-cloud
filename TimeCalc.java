@@ -21,3 +21,5 @@ public class TimeCalc {
         System.out.println(result);
 	}
 }
+
+// great namings!
