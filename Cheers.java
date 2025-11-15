@@ -6,7 +6,7 @@ public class Cheers {
 
         String cheeringWord = spell.toUpperCase();
 
-        final String SPECIAL_LETTERS = "AEFHILMNORSX";
+        final String SPECIAL_LETTERS = "AEFHILMNORSX"; // you haven't learned 'final' + use camel case :)
 
         String article;
 
