@@ -1,3 +1,7 @@
+/*
+Very nicely written but you havent learned classes yet :) 
+*/
+
 public class CalcPi {
     
     public static double calculatePi(int iterations) {
