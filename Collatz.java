@@ -1,3 +1,8 @@
+/*
+Feedback: 
+You havent learned classes, try/catch and other methods that appear here (StringBuilder). 
+*/
+
 public class Collatz {
     
 public static String getCollatzSequence(long n) {
